@@ -1,19 +1,22 @@
-var express = require('express');
-var axios = require('axios');
-var cheerio = require('cheerio');
-var { Builder, By, Capabilities } = require('selenium-webdriver');
-var chrome = require('selenium-webdriver/chrome');
-var pathName = './chromedriver.exe';
-var service = new chrome.ServiceBuilder(pathName).build();
+const express = require('express');
+const axios = require('axios');
+const cheerio = require('cheerio');
+const cors = require('cors');
+const { Builder, By, Capabilities } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
+const pathName = './chromedriver.exe';
+const service = new chrome.ServiceBuilder(pathName).build();
 chrome.setDefaultService(service);
 
-var app = express();
+const app = express();
 
 const baseUrl = 'http://anmtv.xpg.com.br/';
 //http://anmtv.xpg.com.br/page/3/
 //http://anmtv.xpg.com.br/conexao-asia/page/3/
 
-var PORT = 9990;
+const PORT = 9990;
+
+app.use(cors());
 
 app.get('/home/:page', function(req, res) {
     // http://anmtv.xpg.com.br/page/1/
