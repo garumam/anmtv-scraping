@@ -5,7 +5,7 @@ Para testá-lo é necessário utilizar o projeto do site em ReactJs que pode ser
 
 **Imagem do Retorno do Scraping**
 
-![Retorno do Scraping](https://github.com/garumam/anmtv-react/blob/master/imagens-sistema/retorno-scraping.png)
+![Retorno do Scraping](https://github.com/garumam/anmtv-scraping/blob/master/imagens-sistema/retorno-scraping.png)
 
 # Como Utilizar
 Utilize o comando npm install para baixar as dependências do projeto e logo após execute o comando npm start para inicializá-lo na porta 9990.
